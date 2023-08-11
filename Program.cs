@@ -22,15 +22,20 @@ namespace VideoPlay
                 {
                     var outputPath = $"tmp_frame_{frameIndex:D4}.png";
 
-                    //fotograma actual
+                    //actual photoframe
 
                     read.GetVideoThumbnail(FineName, outputPath, frameIndex, 1, VideoCodec.Mpeg4);
+
+                    if(!FileName.Exists(outputPath))
+                        break;  
+
+                    var frameImage = 
+
                     
                 }
             }
 
-        }
-        
+        } 
 
     }
 }
