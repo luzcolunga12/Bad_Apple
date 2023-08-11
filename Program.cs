@@ -13,7 +13,21 @@ namespace VideoPlay
         static void Main(string[]args){
 
             string FileName = "bad_apple.mp4";
-            Console.WriteLine("Video playing...";)
+            Console.WriteLine("Video playing...");
+            using(var read = new FFMpegConverter())
+            {
+                int frameIndex = 0:
+
+                while(true)
+                {
+                    var outputPath = $"tmp_frame_{frameIndex:D4}.png";
+
+                    //fotograma actual
+
+                    read.GetVideoThumbnail(FineName, outputPath, frameIndex, 1, VideoCodec.Mpeg4);
+                    
+                }
+            }
 
         }
         
